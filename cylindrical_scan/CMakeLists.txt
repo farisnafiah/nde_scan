@@ -171,16 +171,17 @@ target_link_libraries(cylindrical_scan_service ${catkin_LIBRARIES})
 
 
 add_executable(cylindrical_scan_node src/cylindrical_scan_node.cpp)
-
 ## Specify libraries to link against the executable
 target_link_libraries(cylindrical_scan_node
   ${catkin_LIBRARIES}
 )
-
 ## Install executable
 install(TARGETS cylindrical_scan_node
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+
+
 
 
 
@@ -193,10 +194,12 @@ install(TARGETS cylindrical_scan_node
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS scripts/cylindrical_scan_server.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+catkin_install_python(PROGRAMS scripts/cylindrical_scan_client.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html

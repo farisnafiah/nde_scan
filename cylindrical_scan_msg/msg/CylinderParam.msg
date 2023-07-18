@@ -7,3 +7,4 @@ float32 base_rot_z
 float32 base_rot_w
 float32 radius
 float32 height
+int32 num_points
