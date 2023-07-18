@@ -1,0 +1,9 @@
+float32 base_x
+float32 base_y
+float32 base_z
+float32 base_rot_x
+float32 base_rot_y
+float32 base_rot_z
+float32 base_rot_w
+float32 radius
+float32 height
